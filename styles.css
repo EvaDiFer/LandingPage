@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Fonts */
+
+  --font-primary: 'Roboto', sans-serif;
+  --font-secundary: 'Nunito', sans-serif;
+
+  /* Colors */
+  --color-primary: #554dde;
+  --color-secundary:  #16194f;
+  --color-terciary: #6a6d9e;
+  --color-text: whitesmoke;
+
+  /* Background */
+  --bg-color:#f44e77;
+  
+
+  /* Text color */
+  --color-text: whitesmoke;
+  --text-details: var(--color-secundary);
+   
+/* Button */
+--btn-color:var(--color-secundary)
+--btn-padding:var(--padding-sm)
+
+
+  /* Font Sizes */
+  --font-size-h1: 3.125em;
+  --font-size-h2:2em;
+  --font-size-h3: 1.5625em;
+  --font-size-h4: 1.30em;
+  --font-size-text: 1.25em;
+  --font-size-link: 1.25em;
+
+  /* Spacings */
+
+  --gap-xl: 50px;
+  --gap-lg: 30px;
+  --gap-md: 20px;
+  --gap-sm: 10px;
+
+  --padding-xl: 60px;
+  --padding-lg: 30px;
+  --padding-md: 20px;
+  --padding-sm: 10px;
+
+  --margin-section: 130px;
+
+  /* Borders */
+  --radius-md: 5px;
+  --radius-lg: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color:var(--bg-color);
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-stripes.png");
+}
+
+a,button{
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+button{
+  background-color: var(--bg-color);
+  padding: var(--padding-sm);
+  border-radius: var(--radius-lg);
+  border-color: var(--color-text);
+}
+
+h1{
+  color:var(--color-text);
+  margin: 4rem;
+}
+
+h2,h3{
+  color: var(--color-primary);
+  padding: 2rem;
+}
+
+p{
+  color: var(--color-text);
+  margin: 1rem;
+}
+
+input{
+  display: none;
+}
+
+label {
+  display:block;
+  border: 1px solid var(--color-text);
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: none;
+ 
+}
+
+/* Maquetación del Header */
+
+header>nav{
+  background-color: var(--color-secundary);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-md);
+}
+
+header>nav>ul{
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.link {
+  font-family: var(--font-secundary);
+  transition: color 0.3s, text-shadow 0.3s, background-color 0.3s;
+  font-size: var(--font-size-link);
+}
+
+.link:hover{
+
+  color: var(--bg-color);
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title{
+  font-size:3.125em;
+}
+
+.herodes{
+  color:var(--color-text);
+}
+
+
+.btn-hero{
+  background-color: var(--color-terciary);
+  margin-left: 4rem;
+}
+
+.btn-hero:hover{
+  background-color: var(--color-secundary);
+}
+
+/* main seccion creditcard */
+
+.creditcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creditcard:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.card-title{
+font-size: var(--font-size-h2);
+}
+
+.card-description{
+font-size: var(--font-size-h3);
+}
+
+.bars{
+  border-radius:var(--radius-lg);
+  background-color:var(--color-text);
+  padding: var(--padding-md);
+  margin: 0 4em;
+
+}
+
+/* section questions */
+
+.question {
+  margin-top: 3rem;
+  text-align: center; 
+} 
+
+.asked{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ask{
+  background-color: var(--color-text);
+  margin-top: 0.5rem;;
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: space-between ;
+  width: 700px;
+  height: 80px; 
+}
+
+.plus{
+  width: 30px;
+  height: 30px;
+  margin-top: 23px;
+  margin-right: 10px;
+}
+
+/* maquetación de footer */
+
+footer{
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--color-terciary);
+}
+
+.custom-footer{
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+  border: solid 2px var(--color-secundary);
+  padding: var(--padding-sm);
+  border-radius: var(--radius-lg);
+ 
+}
+
+.custom-footer h4{
+  font-size: var(--font-size-h4);
+}
+
+.custom-footer h4:hover{
+  color: var(--color-secundary);
+  
+}
+
+.footer-row h4{
+  margin-top: 1rem;
+}
+
+.copy{
+  display: flex;
+  flex-direction: column;
+}
+
+.copy p{
+  align-self: center;
+}
+
+.copylogo{
+  margin-top: 40px;
+  height: 40px;
+  width: 40px;
+  align-self: center;
+}
+
+.copy a{
+  color: var(--color-secundary);
+}
+
+/* RESPONSIVE MODE */
+
+@media (max-width: 768px) {
+
+  label{
+    display: none;
+  }
+  .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-title, .herodes, .card-title, .card-description {
+    text-align: center;
+
+  }
+
+  .btn-hero{
+    margin-left: 18rem;
+  }
+
+  .creditcard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone-hero-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone-hero{
+    max-width: 70%;
+    margin-left: 5rem;
+
+  }
+
+  .card-img>img{
+    max-width: 60%;
+    margin-left: 9rem;
+  }
+
+  h2,h3{
+    padding: var(--padding-sm);
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  
+  nav{
+    height: 15vh;
+  }
+  
+  label{
+    display: inline;
+  }
+  .links{
+    display: none;
+  }
+
+  input:checked  ~ ul{
+    display: block;
+    position: absolute;
+    left: 50%; 
+  
+  }
+  input:checked ~ ul li {
+    margin: 5px 0; /* Puedes ajustar el valor (10px) según tus preferencias */
+  }
+
+  .btn-sing{
+    display: none;
+  }
+
+  .btn-hero{
+    margin-left: 10rem;
+  }
+
+  .card-img>img{
+    margin-left: 6rem;
+  }
+
+
+.bars{
+  margin-top: 1rem;
+}
+
+.bars-img{
+  max-width: 70%;
+  margin-left: 2.5rem;
+}
+
+.card-title{
+  font-size:1.3em;
+}
+
+.card-description{
+  font-size: 1.1em;
+}
+
+.ask{
+  max-width: 80%;
+}
+
+.custom-footer{
+  max-width: 85%;
+}
+
+
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
